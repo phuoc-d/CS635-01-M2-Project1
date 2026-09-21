@@ -7,9 +7,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
 
+//Handle all saving and loading data to txt files
 public class FileManager {
     
-    public void saveBooks(List<Book> books , List<User> users , String filename) throws IOException{
+    //This saves the list of books onto the first line of the text file.
+    //Each book is converted to a string then added to one larger string contain all books
+    //Works the same for usersm but users is placed on the second line
+    public void saveAll(List<Book> books , List<User> users , String filename) throws IOException{
         String stringBook = "";
         for ( Book curr : books ){
             String title = (curr.getTitle());
@@ -41,6 +45,8 @@ public class FileManager {
     }
 
     //"src/Main/DataFile.txt")
+    //Scans the first line of the text file which contains a large string of all books
+    //Then this function splits up all the strings and parse them backing into book objects
     public List<Book> loadBooks( String filePath){
         List<Book> allBook = new ArrayList<>();
 
@@ -67,6 +73,10 @@ public class FileManager {
         return allBook;
     }
 
+
+    //Data for users is placed on the second line of the text files
+    //Scans the first line of the text file which contains a large string of all users
+    //Then this function splits up all the strings and parse them backing into user objects
     public List<User> loadUsers( String filePath ){
         
         List<User> allUser = new ArrayList<>();

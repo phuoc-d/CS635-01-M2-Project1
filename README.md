@@ -16,6 +16,9 @@ Searchable was implemnted as an interface since all users and books need to be a
 ### Persistence 
 The persistence inside this project lies in the FileManager class. This class allows for the person running the code to either save all the data into a txt file: first line being the arraylist of all books, and the second line being an arraylist of all users. Data can also be loaded a file but the loading of books and users are done in different functions calls. When using any methods inside the FileManager, you need to provide the filepath to the file being written or read from. I used a txt file since I've already had experiences in the past using in the past. 
 
+### Execption Handling 
+Execption are used throughout the code to prevent invalid operations from currupting the entire state of the library. This can be with IllegalStateExveption for checkout/return and IllegalArugmentExecption for null user or book. 
+
 ### Testing
 All core functionallity of the Library Management system are tested by the unit test and split into 4 different files. Each testing their sepecific class name. UserTest, BookTest, and TransactionTest test wheter the function calls work given different parameters, such as nulls and some edge cases. The majority of the test are in the LibraryTest.java which covers checking out / returning, adding users/books, and searching through all books and users for specific query mathces. 
 
