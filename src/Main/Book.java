@@ -1,5 +1,6 @@
 package Main;
 
+// This represents a single book inside the library
 public class Book implements Searchable {
     private final String title;
     private final String author;
@@ -27,6 +28,7 @@ public class Book implements Searchable {
         return this.author;
     }
 
+    //Allows books to be compared with other books inside the library.search(query) function
     @Override
     public boolean matches(String compareSearch) {
         String compareLowercased = compareSearch.toLowerCase();

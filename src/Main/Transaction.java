@@ -1,5 +1,6 @@
 package Main;
 
+//This class hols teh data of shared books and uasers needed by its sub class
 public abstract class Transaction {
     private final Book book;
     private final User user;
@@ -17,6 +18,7 @@ public abstract class Transaction {
         return this.user;
     }
 
+    //This is implemeted different in each subclass
     public abstract void execute();
 
 }

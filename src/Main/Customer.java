@@ -1,5 +1,6 @@
 package Main;
 
+//Subclass of user 
 public class Customer extends User{
     
     public Customer(int id, String name){
